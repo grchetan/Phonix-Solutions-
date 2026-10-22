@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 64" fill="none">
+  <defs>
+    <linearGradient id="phDiamondGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="45%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="phGlowW" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00d2ff" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Diamond Logo Mark -->
+  <g transform="translate(4, 4)" filter="url(#phGlowW)">
+    <rect x="10" y="10" width="36" height="36" rx="9" transform="rotate(45 28 28)" fill="url(#phDiamondGradW)"/>
+    <path d="M 23 18 L 30 18 C 34.5 18 37.5 21 37.5 25 C 37.5 29 34.5 32 30 32 L 27.5 32 L 27.5 38 L 23 38 Z" fill="#ffffff"/>
+    <path d="M 27.5 22.2 L 29.8 22.2 C 31.8 22.2 33 23.2 33 25 C 33 26.8 31.8 27.8 29.8 27.8 L 27.5 27.8 Z" fill="url(#phDiamondGradW)"/>
+  </g>
+
+  <!-- Text Section -->
+  <g transform="translate(68, 14)">
+    <text x="0" y="22" font-family="'Manrope', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="20" letter-spacing="-0.02em" fill="#ffffff">
+      Phonix<tspan dx="5" font-weight="700" fill="#38bdf8">IT Solutions</tspan>
+    </text>
+    <text x="1" y="37" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" letter-spacing="0.14em" fill="#94a3b8">
+      BUILDING SOLUTIONS. DRIVING GROWTH.
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>500 — Server Error | Phonix IT Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="display:flex;flex-direction:column;min-height:100vh">
+    <div id="header-placeholder"></div>
+
+    <main style="flex:1;display:grid;place-items:center;padding:5rem 1.5rem;text-align:center">
+      <div style="max-width:32rem">
+        <div style="font-family:'Manrope',sans-serif;font-size:6rem;font-weight:900;background:var(--gradient-primary);-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:1rem">
+          500
+        </div>
+        <h1 style="font-size:1.75rem;font-weight:800;color:var(--navy-900);margin-bottom:0.75rem">
+          Internal Server Error
+        </h1>
+        <p style="color:var(--foreground-muted);font-size:1rem;margin-bottom:2rem">
+          Our servers encountered an unexpected condition. Please try refreshing or return to our homepage.
+        </p>
+        <a href="/" class="btn btn-primary btn-md">
+          Return to Homepage
+        </a>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="floating-placeholder"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script>
+      renderHeader(true);
+      renderFooter();
+      renderFloatingActions();
+    </script>
+  </body>
+</html>

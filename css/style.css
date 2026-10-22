@@ -1,0 +1,11 @@
+/* =========================================================
+   PHEONIX SOLUTIONS — MASTER STYLESHEET
+   Clean, Professional, Fully Responsive B2B Architecture
+   ========================================================= */
+
+@import url('variables.css');
+@import url('navbar.css');
+@import url('footer.css');
+@import url('components.css');
+@import url('pages.css');
+@import url('cookie-consent.css');

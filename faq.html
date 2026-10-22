@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions | Phonix IT Solutions</title>
+    <meta
+      name="description"
+      content="Find answers to common questions about working with Phonix IT Solutions: pricing, timelines, technology stack, security, NDAs, source code ownership, and support."
+    />
+    <meta property="og:title" content="FAQ | Phonix IT Solutions" />
+    <meta
+      property="og:description"
+      content="Everything you need to know about our custom software development, mobile apps, SaaS engineering, and engagement models."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+      <!-- INNER HERO -->
+      <div id="hero-placeholder"></div>
+
+      <!-- FAQ ACCORDION SECTION -->
+      <section class="section-py bg-surface">
+        <div class="container-page">
+          <div class="section-header center">
+            <span class="section-eyebrow">GOT QUESTIONS?</span>
+            <h2 class="editorial-title">Everything You Need to Know</h2>
+            <p class="section-subtitle">
+              Clear, transparent answers about our engineering process, engagements, and capabilities.
+            </p>
+          </div>
+
+          <div style="max-width:50rem;margin:0 auto">
+            <div class="faq-accordion-list" id="faq-list-container">
+              <!-- Rendered from data.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HAVE MORE QUESTIONS CTA -->
+      <section class="section-py">
+        <div class="container-page">
+          <div style="max-width:44rem;margin:0 auto;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:3rem 2rem">
+            <h3 style="font-size:1.5rem;font-weight:800;color:var(--navy-900);margin-bottom:0.5rem">
+              Have a Question That Isn’t Listed Here?
+            </h3>
+            <p style="font-size:0.9375rem;color:var(--foreground-muted);max-width:28rem;margin:0 auto 1.5rem">
+              Our engineering team is always available to discuss technical architecture, timelines, and custom estimates for your specific project.
+            </p>
+            <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
+              <a href="contact" class="btn btn-primary btn-md">
+                <span>Contact Our Team</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+              </a>
+              <a href="tel:+919876543210" class="btn btn-secondary btn-md">
+                <span>Call +91 98765 43210</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Floating Actions -->
+    <div id="floating-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/cursor-effects.js"></script>
+
+    <script>
+      renderHeader();
+      renderFooter();
+      renderFloatingActions();
+
+      document.getElementById('hero-placeholder').innerHTML = renderInnerHero(
+        'Frequently Asked Questions',
+        'Frequently Asked Questions',
+        'Have questions about how we work, our technology stack, or engagement models? Find answers below or speak directly with our team.'
+      );
+
+      const faqContainer = document.getElementById('faq-list-container');
+      if (faqContainer) {
+        faqContainer.innerHTML = faqs
+          .map(
+            (f, idx) => `
+          <div class="faq-item ${idx === 0 ? 'open' : ''}">
+            <button class="faq-trigger" aria-expanded="${idx === 0 ? 'true' : 'false'}">
+              <span>${f.q}</span>
+              <div class="faq-icon">${icons.chevronDown}</div>
+            </button>
+            <div class="faq-content">
+              <p>${f.a}</p>
+            </div>
+          </div>
+        `
+          )
+          .join('');
+
+        initAccordions('#faq-list-container');
+      }
+
+      initScrollReveal();
+    </script>
+  </body>
+</html>
